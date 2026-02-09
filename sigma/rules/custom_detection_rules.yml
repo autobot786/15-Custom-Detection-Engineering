@@ -2,7 +2,7 @@ title: Impossible Travel for Privileged Account
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0001
 status: experimental
 description: Detects privileged account sign-ins from geographically distant locations within an unrealistic timeframe.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1078/
@@ -27,7 +27,7 @@ title: MFA Fatigue Pattern - Multiple Failures Followed by Success
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0002
 status: experimental
 description: Detects repeated MFA challenge failures followed by a successful authentication.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1621/
@@ -55,7 +55,7 @@ title: PowerShell with Base64 Encoded Command
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0003
 status: experimental
 description: Detects PowerShell execution with encoded commands or Base64 decode primitives.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1059/001/
@@ -83,7 +83,7 @@ title: Service Account Interactive Login
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0004
 status: experimental
 description: Detects service accounts performing interactive logons.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1078/003/
@@ -107,7 +107,7 @@ title: Privileged Role Assignment Outside Change Window
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0005
 status: experimental
 description: Detects privileged role assignments (cloud/IAM) that should be restricted to approved change windows.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1098/
@@ -134,7 +134,7 @@ title: Scheduled Task Created with Suspicious Flags
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0006
 status: experimental
 description: Detects suspicious scheduled task creation (SYSTEM/highest privileges or Windows task paths).
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1053/
@@ -164,7 +164,7 @@ title: Ransomware Signal - Mass Deletion Followed by File Extension Changes
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0007
 status: experimental
 description: Detects mass file deletions followed by rename activity to suspicious extensions.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1486/
@@ -198,7 +198,7 @@ title: Data Exfiltration - Spike to Cloud Storage Providers
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0008
 status: experimental
 description: Detects unusual spikes of uploads to common cloud storage providers (proxy/network logs).
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1567/
@@ -224,7 +224,7 @@ title: Security Tool Tampering - AV/EDR/Firewall Disabled
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0009
 status: experimental
 description: Detects stopping/disabling of common security tooling services.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1562/001/
@@ -254,7 +254,7 @@ title: SMB Lateral Movement Burst After Credential Use
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0010
 status: experimental
 description: Detects SMB access to multiple hosts in a short window (possible lateral movement).
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1021/002/
@@ -276,7 +276,7 @@ title: New Local or Domain Admin Created and Privileged Quickly
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0011
 status: experimental
 description: Detects new user creation followed by rapid addition to admin groups.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1136/
@@ -307,7 +307,7 @@ title: DNS Queries to Newly Registered Domains
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0012
 status: experimental
 description: Detects DNS queries to newly registered domains (requires enrichment field domain_age_days).
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1071/004/
@@ -329,7 +329,7 @@ title: Suspicious Mailbox Forwarding Rule to External Recipient
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0013
 status: experimental
 description: Detects creation/modification of mailbox rules forwarding to external recipients.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1114/
@@ -357,7 +357,7 @@ title: VPN Login from Non-Compliant Device
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0014
 status: experimental
 description: Detects VPN access from devices failing compliance/posture checks.
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1133/
@@ -380,7 +380,7 @@ title: Dormant User Access Spike to Sensitive Data
 id: 2d8d6b2a-61e4-4c58-9f2d-ff0d8d9d0015
 status: experimental
 description: Detects dormant accounts accessing sensitive resources (requires enrichment last_seen_days and classification).
-author: <YOUR_NAME>
+author: <SANJEEV>
 date: 2026/02/08
 references:
   - https://attack.mitre.org/techniques/T1087/
