@@ -1,0 +1,25 @@
+{
+  "webhook_example": {
+    "source": "elastic-security",
+    "rule_name": "CDE - PowerShell Encoded Command",
+    "severity": "high",
+    "timestamp": "2026-02-10T12:00:00Z",
+    "user": "jdoe@company.com",
+    "host": "WS-0142",
+    "source_ip": "203.0.113.10",
+    "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff",
+    "kibana_url": "<KIBANA_ALERT_URL>"
+  },
+  "summary_example": {
+    "source": "elastic-security",
+    "rule_name": "CDE - Impossible Travel (Privileged)",
+    "severity": "high",
+    "timestamp": "2026-02-10T12:00:00Z",
+    "entities": {
+      "user": "admin@company.com",
+      "source_ip": "203.0.113.10",
+      "geo": "US"
+    },
+    "notes": "Correlation required: multiple geos < 1h."
+  }
+}

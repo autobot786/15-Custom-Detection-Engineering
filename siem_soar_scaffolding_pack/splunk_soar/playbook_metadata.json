@@ -1,0 +1,43 @@
+{
+  "name": "CDE_Universal_Containment",
+  "type": "playbook",
+  "description": "Scaffold playbook for Custom Detection Engineering alerts (enrich + contain + notify).",
+  "assets": [
+    {
+      "name": "microsoft_graph",
+      "purpose": "revoke tokens / user details"
+    },
+    {
+      "name": "mde",
+      "purpose": "isolate device / device risk"
+    },
+    {
+      "name": "threat_intel",
+      "purpose": "lookup ip/domain/hash"
+    },
+    {
+      "name": "firewall",
+      "purpose": "block ip"
+    },
+    {
+      "name": "slack",
+      "purpose": "notify soc"
+    },
+    {
+      "name": "servicenow",
+      "purpose": "ticketing"
+    }
+  ],
+  "suggested_actions": [
+    "lookup ip",
+    "lookup domain",
+    "lookup hash",
+    "get user",
+    "revoke tokens",
+    "disable user",
+    "isolate device",
+    "block ip",
+    "create ticket",
+    "send message"
+  ]
+}

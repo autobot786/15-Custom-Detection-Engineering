@@ -1,0 +1,22 @@
+{
+  "container_example": {
+    "name": "CDE PowerShell Encoded Command",
+    "severity": "high",
+    "artifacts": [
+      {
+        "cef": {
+          "user": "jdoe@company.com",
+          "dest_host": "WS-0142",
+          "src_ip": "203.0.113.10",
+          "sha256": "ffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"
+        }
+      },
+      {
+        "cef": {
+          "user": "admin@company.com",
+          "src_ip": "198.51.100.20"
+        }
+      }
+    ]
+  }
+}

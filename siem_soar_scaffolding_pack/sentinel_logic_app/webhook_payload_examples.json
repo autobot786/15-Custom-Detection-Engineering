@@ -1,0 +1,47 @@
+{
+  "impossible_travel_example": {
+    "incidentId": "INC-1001",
+    "title": "Impossible Travel for Privileged Account",
+    "severity": "High",
+    "entities": [
+      {
+        "type": "account",
+        "upn": "admin@company.com",
+        "aadObjectId": "00000000-0000-0000-0000-000000000000",
+        "roles": [
+          "Global Administrator"
+        ]
+      },
+      {
+        "type": "ip",
+        "address": "203.0.113.10",
+        "geo": "US"
+      },
+      {
+        "type": "ip",
+        "address": "10.1.2.3",
+        "geo": "GB"
+      }
+    ]
+  },
+  "powershell_encoded_example": {
+    "incidentId": "INC-2003",
+    "title": "PowerShell Encoded Command",
+    "severity": "High",
+    "entities": [
+      {
+        "type": "host",
+        "hostname": "WS-0142",
+        "deviceId": "<DEVICE_ID>"
+      },
+      {
+        "type": "account",
+        "upn": "jdoe@company.com"
+      },
+      {
+        "type": "filehash",
+        "sha256": "deadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeefdeadbeef"
+      }
+    ]
+  }
+}

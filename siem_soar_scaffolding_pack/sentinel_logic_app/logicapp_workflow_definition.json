@@ -1,0 +1,120 @@
+{
+  "$schema": "https://schema.management.azure.com/schemas/2016-06-01/workflowdefinition.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "tenantDomain": {
+      "type": "string",
+      "defaultValue": "<TENANT_DOMAIN>"
+    },
+    "socWebhookUrl": {
+      "type": "string",
+      "defaultValue": "<SOC_WEBHOOK_URL>"
+    },
+    "autoContainment": {
+      "type": "bool",
+      "defaultValue": true
+    }
+  },
+  "triggers": {
+    "When_Sentinel_Incident_Created": {
+      "type": "Request",
+      "kind": "Http",
+      "inputs": {
+        "schema": {
+          "type": "object",
+          "properties": {
+            "incidentId": {
+              "type": "string"
+            },
+            "title": {
+              "type": "string"
+            },
+            "severity": {
+              "type": "string"
+            },
+            "entities": {
+              "type": "array",
+              "items": {
+                "type": "object"
+              }
+            }
+          },
+          "required": [
+            "incidentId",
+            "title",
+            "severity",
+            "entities"
+          ]
+        }
+      }
+    }
+  },
+  "actions": {
+    "Parse_Entities": {
+      "type": "Compose",
+      "inputs": "@triggerBody()?['entities']"
+    },
+    "Extract_Account": {
+      "type": "Compose",
+      "inputs": "@first(body('Parse_Entities'))"
+    },
+    "Condition_AutoContainment": {
+      "type": "If",
+      "expression": "@parameters('autoContainment')",
+      "actions": {
+        "Revoke_User_Sessions_Placeholder": {
+          "type": "Compose",
+          "inputs": "TODO: Call Microsoft Graph to revoke refresh tokens for the user entity."
+        },
+        "Disable_User_Placeholder": {
+          "type": "Compose",
+          "inputs": "TODO: Disable user temporarily (requires Graph permissions)."
+        },
+        "Isolate_Device_Placeholder": {
+          "type": "Compose",
+          "inputs": "TODO: Call MDE API to isolate the device entity (if present)."
+        }
+      },
+      "else": {
+        "actions": {
+          "Manual_Approval_Placeholder": {
+            "type": "Compose",
+            "inputs": "TODO: Add manual approval step before containment."
+          }
+        }
+      }
+    },
+    "Notify_SOC_Webhook": {
+      "type": "Http",
+      "inputs": {
+        "method": "POST",
+        "uri": "@parameters('socWebhookUrl')",
+        "headers": {
+          "Content-Type": "application/json"
+        },
+        "body": {
+          "incidentId": "@triggerBody()?['incidentId']",
+          "title": "@triggerBody()?['title']",
+          "severity": "@triggerBody()?['severity']",
+          "entities": "@triggerBody()?['entities']",
+          "note": "Synthetic template. Replace placeholders with Graph/MDE/ITSM connectors."
+        }
+      },
+      "runAfter": {
+        "Condition_AutoContainment": [
+          "Succeeded"
+        ]
+      }
+    },
+    "Add_Incident_Comment_Placeholder": {
+      "type": "Compose",
+      "inputs": "TODO: Add comment back to Sentinel incident with enrichment + actions taken.",
+      "runAfter": {
+        "Notify_SOC_Webhook": [
+          "Succeeded"
+        ]
+      }
+    }
+  },
+  "outputs": {}
+}
