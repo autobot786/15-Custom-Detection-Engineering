@@ -1,0 +1,4 @@
+TimeGenerated,SourceUserName,SourceIP,DestinationHostName,SentBytes
+2026-02-10T11:40:00Z,alice@company.com,10.2.3.4,drive.google.com,800000000
+2026-02-10T11:42:00Z,alice@company.com,10.2.3.4,dropbox.com,50000000
+2026-02-10T11:50:00Z,svc_deploy,10.2.3.9,intranet.company.com,5000000

@@ -1,0 +1,4 @@
+TimeGenerated,DeviceName,InitiatingProcessFileName,ActionType,FilePath,FileName,DataClassification,User
+2026-02-10T11:20:00Z,WS-0200,unknown.exe,FileDeleted,C:\Data\a.docx,a.docx,Confidential,svc_backup
+2026-02-10T11:21:00Z,WS-0200,unknown.exe,FileRenamed,C:\Data\a.docx.locked,a.docx.locked,Confidential,svc_backup
+2026-02-10T11:45:00Z,WS-0300,explorer.exe,FileRead,\\share\HR\pii.xlsx,pii.xlsx,PII,dormant@company.com

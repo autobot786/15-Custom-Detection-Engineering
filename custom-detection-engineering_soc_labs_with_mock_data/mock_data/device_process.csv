@@ -1,0 +1,3 @@
+TimeGenerated,DeviceName,AccountName,FileName,ProcessCommandLine,InitiatingProcessFileName,SHA256
+2026-02-10T11:00:00Z,WS-0142,jdoe,powershell.exe,powershell.exe -enc SQBFAFgA,WINWORD.EXE,deadbeef
+2026-02-10T11:05:00Z,WS-0142,jdoe,schtasks.exe,schtasks /create /ru SYSTEM /rl HIGHEST /tn Upd /tr C:\Users\jdoe\AppData\Roaming\u.ps1,powershell.exe,beadfeed

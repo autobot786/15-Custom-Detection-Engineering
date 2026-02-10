@@ -1,0 +1,7 @@
+TimeGenerated,UserPrincipalName,IPAddress,Location,ResultType,Roles,AppDisplayName
+2026-02-10T09:00:00Z,admin@company.com,10.1.2.3,GB,0,Global Administrator,Azure Portal
+2026-02-10T09:50:00Z,admin@company.com,203.0.113.10,US,0,Global Administrator,Azure Portal
+2026-02-10T11:35:00Z,jane@company.com,198.51.100.20,GB,50074,User,M365
+2026-02-10T11:36:00Z,jane@company.com,198.51.100.20,GB,50074,User,M365
+2026-02-10T11:37:00Z,jane@company.com,198.51.100.20,GB,50074,User,M365
+2026-02-10T11:38:00Z,jane@company.com,198.51.100.20,GB,0,User,M365

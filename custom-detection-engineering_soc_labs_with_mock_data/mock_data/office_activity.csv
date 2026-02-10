@@ -1,0 +1,2 @@
+TimeGenerated,UserId,Operation,ClientIP,Parameters
+2026-02-10T07:00:00Z,victim@company.com,New-InboxRule,203.0.113.50,"{""ForwardTo"":""attacker@gmail.com"",""RuleName"":""Invoices""}"
