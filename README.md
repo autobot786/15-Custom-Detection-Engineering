@@ -1,4 +1,4 @@
-# 🛡️ Custom Detection Engineering
+#  Custom Detection Engineering
 
 <div align="center">
 
@@ -13,7 +13,7 @@
 
 ---
 
-## 📋 Table of Contents
+##  Table of Contents
 
 - [Overview](#-overview)
 - [Key Features](#-key-features)
@@ -30,7 +30,7 @@
 
 ---
 
-## 🎯 Overview
+##  Overview
 
 This repository provides **15 enterprise-grade detection rules** covering critical threat scenarios, from credential abuse to ransomware indicators. Built for **Detection Engineers**, **SOC Analysts**, and **Incident Responders**, this project includes:
 
@@ -44,21 +44,21 @@ This repository provides **15 enterprise-grade detection rules** covering critic
 
 ---
 
-## 🚀 Key Features
+##  Key Features
 
 | Feature | Description |
 |---------|-------------|
-| 🎯 **15 High-Fidelity Detections** | Covering authentication abuse, lateral movement, exfiltration, and defense evasion |
-| 📊 **Multi-Platform Support** | Native queries for Splunk, Microsoft Sentinel, and Elastic Security |
-| 📖 **Ready-to-Use Playbooks** | Markdown guides + interactive Jupyter notebooks with investigation queries |
-| 🤖 **SOAR Scaffolding** | Pre-built Logic App workflows, Splunk SOAR playbooks, and webhook templates |
-| 🧪 **SOC Lab Environment** | Mock data generators for safe testing without production impact |
-| 📈 **Metrics Templates** | Track MTTA, MTTR, false positives, and detection precision |
-| 🗺️ **MITRE ATT&CK Aligned** | Full technique mapping from T1078 (Valid Accounts) to T1567 (Exfiltration) |
+|  **15 High-Fidelity Detections** | Covering authentication abuse, lateral movement, exfiltration, and defense evasion |
+|  **Multi-Platform Support** | Native queries for Splunk, Microsoft Sentinel, and Elastic Security |
+|  **Ready-to-Use Playbooks** | Markdown guides + interactive Jupyter notebooks with investigation queries |
+|  **SOAR Scaffolding** | Pre-built Logic App workflows, Splunk SOAR playbooks, and webhook templates |
+|  **SOC Lab Environment** | Mock data generators for safe testing without production impact |
+|  **Metrics Templates** | Track MTTA, MTTR, false positives, and detection precision |
+|  **MITRE ATT&CK Aligned** | Full technique mapping from T1078 (Valid Accounts) to T1567 (Exfiltration) |
 
 ---
 
-## 🔍 Detection Coverage
+##  Detection Coverage
 
 ### MITRE ATT&CK Techniques
 
@@ -101,26 +101,26 @@ This project covers **15 distinct MITRE ATT&CK techniques** across multiple tact
 </tr>
 </table>
 
-[📄 Full MITRE Mapping Table →](docs/mitre_mapping.md)
+[ Full MITRE Mapping Table →](docs/mitre_mapping.md)
 
 ---
 
-## 📁 Repository Structure
+##  Repository Structure
 
 ```plaintext
 Custom-Detection-Engineering/
 │
-├── 📁 sigma/                                    # Sigma detection rules
+├──  sigma/                                    # Sigma detection rules
 │   ├── README.md                               # Sigma rules overview
 │   └── rules/
 │       └── custom_detection_rules.yml          # 15 vendor-agnostic Sigma rules
 │
-├── 📁 platform/                                 # Platform-specific SIEM queries
+├──  platform/                                 # Platform-specific SIEM queries
 │   ├── splunk/                                 # Splunk SPL queries
 │   ├── sentinel/                               # Microsoft Sentinel KQL queries
 │   └── elastic/                                # Elastic Security EQL/KQL queries
 │
-├── 📁 playbooks/                                # Incident response playbooks
+├──  playbooks/                                # Incident response playbooks
 │   ├── 01_impossible_travel.md                # Quick-reference Markdown guides
 │   ├── 02_mfa_fatigue_attack.md
 │   ├── ...                                     # (15 total playbooks)
@@ -129,7 +129,7 @@ Custom-Detection-Engineering/
 │       ├── ...                                 # Interactive Jupyter notebooks with queries
 │       └── 15_dormant_user_sensitive_access.ipynb
 │
-├── 📁 siem_soar_scaffolding_pack/              # SIEM/SOAR automation scaffolding
+├──  siem_soar_scaffolding_pack/              # SIEM/SOAR automation scaffolding
 │   ├── README.md                               # Integration guide
 │   ├── sentinel_logic_app/                     # Microsoft Sentinel Logic Apps
 │   │   ├── playbook_actions.json
@@ -141,7 +141,7 @@ Custom-Detection-Engineering/
 │       ├── rule_actions_examples.json
 │       └── webhook_payload_templates.json
 │
-├── 📁 custom-detection-engineering_soc_labs_with_mock_data/
+├──  custom-detection-engineering_soc_labs_with_mock_data/
 │   ├── README.md                               # Lab setup instructions
 │   ├── mock_data_generators/                   # Python scripts to generate test events
 │   │   ├── generate_auth_events.py
@@ -149,13 +149,13 @@ Custom-Detection-Engineering/
 │   │   └── ...
 │   └── screenshots/                            # Synthetic SIEM alert screenshots
 │
-├── 📁 docs/                                     # Documentation
+├──  docs/                                     # Documentation
 │   ├── data_sources.md                         # Required log sources & enrichment
 │   ├── tuning_guidelines.md                    # Allowlists, thresholds, baselines
 │   ├── mitre_mapping.md                        # MITRE ATT&CK technique mapping
 │   └── metrics.md                              # Metrics template (MTTA/MTTR/FP rate)
 │
-├── 📁 assets/                                   # Images, diagrams, badges
+├──  assets/                                   # Images, diagrams, badges
 │
 ├── README.md                                    # This file
 ├── CHANGELOG.md                                 # Version history
@@ -165,16 +165,16 @@ Custom-Detection-Engineering/
 
 ---
 
-## ⚡ Quick Start
+##  Quick Start
 
-### 1️⃣ Clone the Repository
+### 1️ Clone the Repository
 
 ```bash
 git clone https://github.com/autobot786/Custom-Detection-Engineering.git
 cd Custom-Detection-Engineering
 ```
 
-### 2️⃣ Choose Your Platform
+### 2️ Choose Your Platform
 
 Navigate to the platform-specific directory:
 
@@ -189,20 +189,20 @@ cd platform/sentinel/
 cd platform/elastic/
 ```
 
-### 3️⃣ Deploy Detection Rules
+### 3️ Deploy Detection Rules
 
 - **Sigma Rules**: Convert using `sigmac` or platform-specific converters
 - **Platform Queries**: Import directly into your SIEM
 - **Playbooks**: Reference during incident response
 
-### 4️⃣ Test with Mock Data (Optional)
+### 4️ Test with Mock Data (Optional)
 
 ```bash
 cd custom-detection-engineering_soc_labs_with_mock_data/mock_data_generators/
 python generate_auth_events.py --output sample_auth.json
 ```
 
-### 5️⃣ Integrate SOAR (Optional)
+### 5️ Integrate SOAR (Optional)
 
 Follow the guides in `siem_soar_scaffolding_pack/` to deploy:
 - **Sentinel Logic Apps** for automated containment
@@ -211,7 +211,7 @@ Follow the guides in `siem_soar_scaffolding_pack/` to deploy:
 
 ---
 
-## 🎯 Detection Rules
+##  Detection Rules
 
 ### Summary Table
 
@@ -233,15 +233,15 @@ Follow the guides in `siem_soar_scaffolding_pack/` to deploy:
 | 14 | VPN Access from Non-Compliant Device | T1133 | Medium | VPN logs, device compliance |
 | 15 | Dormant User Accessing Sensitive Resources | T1087 | Medium | Authentication, file access logs |
 
-[📂 View All Sigma Rules →](sigma/rules/)
+[ View All Sigma Rules →](sigma/rules/)
 
 ---
 
-## 📘 Playbooks & Response
+##  Playbooks & Response
 
 Each detection has **two playbook formats**:
 
-### 🔹 Markdown Guides (Quick Reference)
+###  Markdown Guides (Quick Reference)
 
 One-page summaries with:
 - **Triage steps** (context gathering, validation)
@@ -251,7 +251,7 @@ One-page summaries with:
 
 **Example**: [Playbook 01 - Impossible Travel →](playbooks/01_impossible_travel.md)
 
-### 🔹 Jupyter Notebooks (Interactive Investigation)
+###  Jupyter Notebooks (Interactive Investigation)
 
 Executable notebooks with:
 - **Triage checklists**
@@ -261,11 +261,11 @@ Executable notebooks with:
 
 **Example**: [Jupyter Playbook 07 - Ransomware →](playbooks/custom-detection-engineering_jupyter_playbooks/07_ransomware_behavior_indicator.ipynb)
 
-[📂 Browse All Playbooks →](playbooks/)
+[ Browse All Playbooks →](playbooks/)
 
 ---
 
-## 🤖 SIEM/SOAR Integration
+##  SIEM/SOAR Integration
 
 ### Microsoft Sentinel
 
@@ -273,7 +273,7 @@ Executable notebooks with:
 - **Webhook payload examples** for alert ingestion
 - **KQL queries** for hunting and analytics rules
 
-[📄 Sentinel Integration Guide →](siem_soar_scaffolding_pack/sentinel_logic_app/)
+[ Sentinel Integration Guide →](siem_soar_scaffolding_pack/sentinel_logic_app/)
 
 ### Splunk SOAR (Phantom)
 
@@ -281,7 +281,7 @@ Executable notebooks with:
 - **Metadata templates** for app integration
 - **SPL correlation searches**
 
-[📄 Splunk SOAR Guide →](siem_soar_scaffolding_pack/splunk_soar/)
+[ Splunk SOAR Guide →](siem_soar_scaffolding_pack/splunk_soar/)
 
 ### Elastic Security
 
@@ -289,13 +289,13 @@ Executable notebooks with:
 - **NDJSON rule snippets** for detection rules
 - **EQL/KQL query templates**
 
-[📄 Elastic Integration Guide →](siem_soar_scaffolding_pack/elastic_actions/)
+[ Elastic Integration Guide →](siem_soar_scaffolding_pack/elastic_actions/)
 
-> ⚠️ **Important**: Replace placeholders (`<TENANT_ID>`, `<WEBHOOK_URL>`, etc.) with your environment values before deployment.
+>  **Important**: Replace placeholders (`<TENANT_ID>`, `<WEBHOOK_URL>`, etc.) with your environment values before deployment.
 
 ---
 
-## 📊 Metrics & Impact
+##  Metrics & Impact
 
 ### What to Track
 
@@ -314,11 +314,11 @@ Use the [metrics template](docs/metrics.md) to measure detection effectiveness:
 > _"Reduced false positives by **38%** after implementing VPN egress allowlists and baselining admin tooling."_
 > _"Improved MTTR by **22%** using standardized containment steps for account compromise scenarios."_
 
-[📈 Full Metrics Template →](docs/metrics.md)
+[ Full Metrics Template →](docs/metrics.md)
 
 ---
 
-## 📚 Documentation
+##  Documentation
 
 | Document | Purpose |
 |----------|---------|
@@ -329,7 +329,7 @@ Use the [metrics template](docs/metrics.md) to measure detection effectiveness:
 
 ---
 
-## 🤝 Contributing
+##  Contributing
 
 Contributions are welcome! Please:
 
@@ -349,7 +349,7 @@ Contributions are welcome! Please:
 
 ---
 
-## 📜 Version History
+##  Version History
 
 ### v1.1.0 (Latest)
 ✅ Added complete SIEM queries (Splunk/Sentinel/Elastic) for all 15 detections  
@@ -357,19 +357,19 @@ Contributions are welcome! Please:
 ✅ Enhanced SOAR scaffolding with webhook payloads
 
 ### v1.0.0
-🎉 Initial release: 15 Sigma detections + response playbooks
+ Initial release: 15 Sigma detections + response playbooks
 
-[📄 Full Changelog →](CHANGELOG.md)
+[ Full Changelog →](CHANGELOG.md)
 
 ---
 
-## 📄 License
+##  License
 
 This project is licensed under the **Other** license. See [LICENSE](LICENSE) for details.
 
 ---
 
-## 🙏 Acknowledgments
+##  Acknowledgments
 
 Built with insights from:
 - **MITRE ATT&CK Framework** (threat modeling)
@@ -378,7 +378,7 @@ Built with insights from:
 
 ---
 
-## 📞 Contact
+##  Contact
 
 **Author**: [@autobot786](https://github.com/autobot786)
 
@@ -388,11 +388,11 @@ For questions, feedback, or collaboration opportunities, please open an issue or
 
 <div align="center">
 
-**⭐ Star this repository if you find it useful!**
+** Star this repository if you find it useful!**
 
 [![GitHub stars](https://img.shields.io/github/stars/autobot786/Custom-Detection-Engineering?style=social)](https://github.com/autobot786/Custom-Detection-Engineering/stargazers)
 [![GitHub forks](https://img.shields.io/github/forks/autobot786/Custom-Detection-Engineering?style=social)](https://github.com/autobot786/Custom-Detection-Engineering/network/members)
 
-Made with ❤️ for the Security Operations Community
+Made with  for the Security Operations Community
 
 </div>
